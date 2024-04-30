@@ -105,9 +105,9 @@
 		FA2106F92BDFE70400A7F070 /* Authitication */ = {
 			isa = PBXGroup;
 			children = (
-				FA2107002BDFE9AA00A7F070 /* ForfotPasswordController.swift */,
-				FA2106FA2BDFE73300A7F070 /* RegisterController.swift */,
 				FA2106FC2BDFE74600A7F070 /* LoginController.swift */,
+				FA2106FA2BDFE73300A7F070 /* RegisterController.swift */,
+				FA2107002BDFE9AA00A7F070 /* ForfotPasswordController.swift */,
 			);
 			path = Authitication;
 			sourceTree = "<group>";

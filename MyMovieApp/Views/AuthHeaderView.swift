@@ -13,7 +13,7 @@ final class AuthHeaderView: UIView {
     private let logoImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
-        image.image = UIImage(systemName: "airplane") // TODO: Should be use logo
+        image.image = UIImage(named: .loginLogo) // TODO: Should be use logo
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -59,8 +59,8 @@ final class AuthHeaderView: UIView {
         NSLayoutConstraint.activate([
             self.logoImageView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor, constant: 16),
             self.logoImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.logoImageView.widthAnchor.constraint(equalToConstant: 90),
-            self.logoImageView.heightAnchor.constraint(equalToConstant: 90),
+            self.logoImageView.widthAnchor.constraint(equalToConstant: 115),
+            self.logoImageView.heightAnchor.constraint(equalToConstant: 115),
             
             self.titltLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 19),
             self.titltLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
