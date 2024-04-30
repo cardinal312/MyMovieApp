@@ -19,6 +19,8 @@
 		FA2107072BDFF1AD00A7F070 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2107062BDFF1AD00A7F070 /* String + Extension.swift */; };
 		FA2107092BDFF60600A7F070 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2107082BDFF60600A7F070 /* CustomTextField.swift */; };
 		FA21070B2BDFFE3500A7F070 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21070A2BDFFE3500A7F070 /* CustomButton.swift */; };
+		FAE6C8E92BE0983C009A8D13 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */; };
+		FAE6C8EB2BE09C46009A8D13 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE6C8EA2BE09C46009A8D13 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		FA2107062BDFF1AD00A7F070 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		FA2107082BDFF60600A7F070 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		FA21070A2BDFFE3500A7F070 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		FAE6C8EA2BE09C46009A8D13 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				FA2106E62BDFE56A00A7F070 /* HomeController.swift */,
+				FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */,
 				FA2106F92BDFE70400A7F070 /* Authitication */,
 			);
 			path = Controllers;
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				FA2107062BDFF1AD00A7F070 /* String + Extension.swift */,
+				FAE6C8EA2BE09C46009A8D13 /* NetworkError.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,8 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2107012BDFE9AA00A7F070 /* ForfotPasswordController.swift in Sources */,
+				FAE6C8E92BE0983C009A8D13 /* WebViewController.swift in Sources */,
 				FA2106E72BDFE56A00A7F070 /* HomeController.swift in Sources */,
 				FA2107072BDFF1AD00A7F070 /* String + Extension.swift in Sources */,
+				FAE6C8EB2BE09C46009A8D13 /* NetworkError.swift in Sources */,
 				FA2106FB2BDFE73300A7F070 /* RegisterController.swift in Sources */,
 				FA21070B2BDFFE3500A7F070 /* CustomButton.swift in Sources */,
 				FA2106E32BDFE56A00A7F070 /* AppDelegate.swift in Sources */,

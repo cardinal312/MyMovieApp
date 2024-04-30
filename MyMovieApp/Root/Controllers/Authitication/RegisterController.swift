@@ -10,7 +10,7 @@ import UIKit
 final class RegisterController: UIViewController {
     
     // MARK: - UI Components
-    private let headerView = AuthHeaderView(title: .registerTitle, subTitle: .registerSubTitle)
+    private let headerView = AuthHeaderView(title: .signUpTitle, subTitle: .registerSubTitle)
     private let userNameField = CustomTextField(fieldType: .userName)
     private let emailField = CustomTextField(fieldType: .email)
     private let passwordField = CustomTextField(fieldType: .password)
@@ -19,12 +19,18 @@ final class RegisterController: UIViewController {
     private let signInButton = CustomButton(title: "Already have an account? Sign In.", fontSize: .med)
     
     private let termsTextView: UITextView = {
+        let atributedString = NSMutableAttributedString(string: .registerTerms)
+        atributedString.addAttribute(.link, value: "terms://termsAndConditions", range: (atributedString.string as NSString).range(of: .termsAndConditions))
+        atributedString.addAttribute(.link, value: "privacy://privacyPolicy", range: (atributedString.string as NSString).range(of: .privacyPolicy))
+        
         let tv = UITextView()
-        tv.text = .registerTerms
+        tv.linkTextAttributes = [.foregroundColor : UIColor.systemBlue]
         tv.backgroundColor = .clear
+        tv.attributedText = atributedString
         tv.textColor = .label
-        tv.isSelectable = true
+        tv.isSelectable = true // if needed we can make false
         tv.isEditable = false
+        tv.delaysContentTouches = false
         tv.isScrollEnabled = false
         tv.translatesAutoresizingMaskIntoConstraints = false
         return tv
@@ -34,6 +40,8 @@ final class RegisterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        
+        self.termsTextView.delegate = self
         
         self.signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         self.signInButton.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
@@ -102,11 +110,35 @@ final class RegisterController: UIViewController {
     
     // MARK: - Selectors
     @objc private func didTapSignUpButton() {
-        print(#function)
+        print("DEBUG PRINT:", "didTapSignUpButton")
     }
     
     @objc private func didTapSignInButton() {
         self.navigationController?.popViewController(animated: true)
     }
- 
+}
+
+// MARK: Extensions
+extension RegisterController: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        if URL.scheme == "terms" {
+            self.showViewerController(with: .googleTermsServiceUrl)
+        } else if URL.scheme == "privacy" {
+            self.showViewerController(with: .googlePrivacyServiceUrl)
+        }
+        return true
+    }
+    
+    private func showViewerController(with urlString: String) {
+        let vc = WebViewController(with: urlString)
+        let nav = UINavigationController(rootViewController: vc)
+        self.present(nav, animated: true, completion: nil)
+    }
+    
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        textView.delegate = nil
+        textView.selectedTextRange = nil
+        textView.delegate = self
+    }
 }
