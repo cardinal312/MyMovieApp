@@ -21,6 +21,7 @@
 		FA21070B2BDFFE3500A7F070 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21070A2BDFFE3500A7F070 /* CustomButton.swift */; };
 		FAE6C8E92BE0983C009A8D13 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */; };
 		FAE6C8EB2BE09C46009A8D13 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE6C8EA2BE09C46009A8D13 /* NetworkError.swift */; };
+		FAE6C8EE2BE0CDC3009A8D13 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE6C8ED2BE0CDC3009A8D13 /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FA21070A2BDFFE3500A7F070 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		FAE6C8EA2BE09C46009A8D13 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FAE6C8ED2BE0CDC3009A8D13 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,8 @@
 		FA2106E12BDFE56A00A7F070 /* MyMovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				FAE6C8EC2BE0CD9E009A8D13 /* Managers */,
+				FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */,
 				FA2107052BDFF18B00A7F070 /* Extensions */,
 				FA2107022BDFEA6C00A7F070 /* Views */,
 				FA2106F82BDFE6F200A7F070 /* Root */,
@@ -120,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				FA2106E62BDFE56A00A7F070 /* HomeController.swift */,
-				FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */,
 				FA2106F92BDFE70400A7F070 /* Authitication */,
 			);
 			path = Controllers;
@@ -153,6 +156,14 @@
 				FAE6C8EA2BE09C46009A8D13 /* NetworkError.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAE6C8EC2BE0CD9E009A8D13 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FAE6C8ED2BE0CDC3009A8D13 /* AlertManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 				FA2106E72BDFE56A00A7F070 /* HomeController.swift in Sources */,
 				FA2107072BDFF1AD00A7F070 /* String + Extension.swift in Sources */,
 				FAE6C8EB2BE09C46009A8D13 /* NetworkError.swift in Sources */,
+				FAE6C8EE2BE0CDC3009A8D13 /* AlertManager.swift in Sources */,
 				FA2106FB2BDFE73300A7F070 /* RegisterController.swift in Sources */,
 				FA21070B2BDFFE3500A7F070 /* CustomButton.swift in Sources */,
 				FA2106E32BDFE56A00A7F070 /* AppDelegate.swift in Sources */,
