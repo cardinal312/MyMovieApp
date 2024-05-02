@@ -18,6 +18,17 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         nav.modalPresentationStyle = .fullScreen
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
+        
+        
+        let newUser = RegisterUserRequest(username: "Cardinal", email: "cardinal@gmail.com", password: "12345test")
+        AuthManager.shared.registerUser(with: newUser) { result, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            print("Was registered in firebase: - \(result)")
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
