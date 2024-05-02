@@ -8,5 +8,5 @@
 import Foundation
 
 enum NetworkError: Error {
-    case badUrl, registerUser, passUserDataToCollectionUser
+    case badUrl, registerUser, passUserDataToCollectionUser, signInAuth, errorWithSignOut
 }

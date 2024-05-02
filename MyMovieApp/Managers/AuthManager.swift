@@ -47,13 +47,29 @@ final class AuthManager {
                         compleation(false, .passUserDataToCollectionUser)
                         return
                     }
-                    
                     compleation(true, nil) // If successfuly pass user data to db
-                    
-                    
-                }
-            
-            
+            }
+        }
+    }
+    
+    func signIn(with userRequest: LoginUserRequest, compleation: @escaping (NetworkError?) -> Void) {
+        Auth.auth().signIn(withEmail: userRequest.email, password: userRequest.password) { result, error in
+            if let error = error {
+                compleation(.signInAuth)
+                return
+            } else {
+                compleation(nil)
+            }
+        }
+    }
+    
+    func signOut(completion: @escaping (NetworkError?) -> Void) {
+        do {
+           try Auth.auth().signOut()
+            completion(nil)
+        } catch let error {
+            print(error.localizedDescription)
+            completion(.errorWithSignOut)
         }
     }
 }

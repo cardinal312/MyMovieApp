@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA11ED852BE39E6C00E7FF03 /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11ED842BE39E6C00E7FF03 /* LoginUserRequest.swift */; };
 		FA2106E32BDFE56A00A7F070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2106E22BDFE56A00A7F070 /* AppDelegate.swift */; };
 		FA2106E52BDFE56A00A7F070 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2106E42BDFE56A00A7F070 /* SceneDelegate.swift */; };
 		FA2106E72BDFE56A00A7F070 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2106E62BDFE56A00A7F070 /* HomeController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA11ED842BE39E6C00E7FF03 /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
 		FA2106DF2BDFE56A00A7F070 /* MyMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2106E22BDFE56A00A7F070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA2106E42BDFE56A00A7F070 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA11ED862BE3AE9600E7FF03 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		FA2106D62BDFE56A00A7F070 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +133,7 @@
 		FA2106E12BDFE56A00A7F070 /* MyMovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA11ED862BE3AE9600E7FF03 /* ViewModels */,
 				FAFEFB4A2BE3518C00E12991 /* Models */,
 				FAE6C8EC2BE0CD9E009A8D13 /* Managers */,
 				FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */,
@@ -223,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFEFB4B2BE351A000E12991 /* RegisterUserRequest.swift */,
+				FA11ED842BE39E6C00E7FF03 /* LoginUserRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,6 +338,7 @@
 			files = (
 				FA2107012BDFE9AA00A7F070 /* ForfotPasswordController.swift in Sources */,
 				FAFEFB492BE34F1A00E12991 /* AuthManager.swift in Sources */,
+				FA11ED852BE39E6C00E7FF03 /* LoginUserRequest.swift in Sources */,
 				FAE6C8E92BE0983C009A8D13 /* WebViewController.swift in Sources */,
 				FAFEFB4C2BE351A000E12991 /* RegisterUserRequest.swift in Sources */,
 				FA2106E72BDFE56A00A7F070 /* HomeController.swift in Sources */,
