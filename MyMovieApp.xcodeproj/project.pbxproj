@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA08A0172BE3EF2800CC1EEF /* MainTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08A0162BE3EF2800CC1EEF /* MainTabBarControllerViewController.swift */; };
+		FA08A0192BE3EFC400CC1EEF /* UpcomingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08A0182BE3EFC400CC1EEF /* UpcomingController.swift */; };
+		FA08A01B2BE3F00000CC1EEF /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08A01A2BE3F00000CC1EEF /* ChatController.swift */; };
+		FA08A01D2BE3F02F00CC1EEF /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08A01C2BE3F02F00CC1EEF /* SearchController.swift */; };
+		FA08A01F2BE3F07F00CC1EEF /* DownloadsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08A01E2BE3F07F00CC1EEF /* DownloadsController.swift */; };
 		FA11ED852BE39E6C00E7FF03 /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11ED842BE39E6C00E7FF03 /* LoginUserRequest.swift */; };
+		FA11ED882BE3B01300E7FF03 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11ED872BE3B01300E7FF03 /* Validator.swift */; };
 		FA2106E32BDFE56A00A7F070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2106E22BDFE56A00A7F070 /* AppDelegate.swift */; };
 		FA2106E52BDFE56A00A7F070 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2106E42BDFE56A00A7F070 /* SceneDelegate.swift */; };
 		FA2106E72BDFE56A00A7F070 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2106E62BDFE56A00A7F070 /* HomeController.swift */; };
@@ -20,6 +26,7 @@
 		FA2107072BDFF1AD00A7F070 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2107062BDFF1AD00A7F070 /* String + Extension.swift */; };
 		FA2107092BDFF60600A7F070 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2107082BDFF60600A7F070 /* CustomTextField.swift */; };
 		FA21070B2BDFFE3500A7F070 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21070A2BDFFE3500A7F070 /* CustomButton.swift */; };
+		FAD2ADA12BE48D35002383DE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2ADA02BE48D35002383DE /* User.swift */; };
 		FAE6C8E92BE0983C009A8D13 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */; };
 		FAE6C8EB2BE09C46009A8D13 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE6C8EA2BE09C46009A8D13 /* NetworkError.swift */; };
 		FAE6C8EE2BE0CDC3009A8D13 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE6C8ED2BE0CDC3009A8D13 /* AlertManager.swift */; };
@@ -51,7 +58,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA08A0162BE3EF2800CC1EEF /* MainTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		FA08A0182BE3EFC400CC1EEF /* UpcomingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingController.swift; sourceTree = "<group>"; };
+		FA08A01A2BE3F00000CC1EEF /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		FA08A01C2BE3F02F00CC1EEF /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		FA08A01E2BE3F07F00CC1EEF /* DownloadsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsController.swift; sourceTree = "<group>"; };
 		FA11ED842BE39E6C00E7FF03 /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
+		FA11ED872BE3B01300E7FF03 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		FA2106DF2BDFE56A00A7F070 /* MyMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2106E22BDFE56A00A7F070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA2106E42BDFE56A00A7F070 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +79,7 @@
 		FA2107062BDFF1AD00A7F070 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		FA2107082BDFF60600A7F070 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		FA21070A2BDFFE3500A7F070 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		FAD2ADA02BE48D35002383DE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		FAE6C8EA2BE09C46009A8D13 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FAE6C8ED2BE0CDC3009A8D13 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -107,6 +121,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA08A0202BE3F7AA00CC1EEF /* TabBarItems */ = {
+			isa = PBXGroup;
+			children = (
+				FA08A0162BE3EF2800CC1EEF /* MainTabBarControllerViewController.swift */,
+				FA2106E62BDFE56A00A7F070 /* HomeController.swift */,
+				FA08A0182BE3EFC400CC1EEF /* UpcomingController.swift */,
+				FA08A01A2BE3F00000CC1EEF /* ChatController.swift */,
+				FA08A01C2BE3F02F00CC1EEF /* SearchController.swift */,
+				FA08A01E2BE3F07F00CC1EEF /* DownloadsController.swift */,
+			);
+			path = TabBarItems;
+			sourceTree = "<group>";
+		};
 		FA11ED862BE3AE9600E7FF03 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +163,6 @@
 				FA11ED862BE3AE9600E7FF03 /* ViewModels */,
 				FAFEFB4A2BE3518C00E12991 /* Models */,
 				FAE6C8EC2BE0CD9E009A8D13 /* Managers */,
-				FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */,
 				FA2107052BDFF18B00A7F070 /* Extensions */,
 				FA2107022BDFEA6C00A7F070 /* Views */,
 				FA2106F82BDFE6F200A7F070 /* Root */,
@@ -165,6 +191,7 @@
 		FA2106F82BDFE6F200A7F070 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				FA2106F92BDFE70400A7F070 /* Authitication */,
 				FA2106FE2BDFE76600A7F070 /* Controllers */,
 				FA2106F72BDFE6DD00A7F070 /* Views */,
 			);
@@ -184,8 +211,8 @@
 		FA2106FE2BDFE76600A7F070 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA2106E62BDFE56A00A7F070 /* HomeController.swift */,
-				FA2106F92BDFE70400A7F070 /* Authitication */,
+				FAE6C8E82BE0983C009A8D13 /* WebViewController.swift */,
+				FA08A0202BE3F7AA00CC1EEF /* TabBarItems */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +252,7 @@
 			children = (
 				FAE6C8ED2BE0CDC3009A8D13 /* AlertManager.swift */,
 				FAFEFB482BE34F1A00E12991 /* AuthManager.swift */,
+				FA11ED872BE3B01300E7FF03 /* Validator.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -234,6 +262,7 @@
 			children = (
 				FAFEFB4B2BE351A000E12991 /* RegisterUserRequest.swift */,
 				FA11ED842BE39E6C00E7FF03 /* LoginUserRequest.swift */,
+				FAD2ADA02BE48D35002383DE /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,21 +366,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2107012BDFE9AA00A7F070 /* ForfotPasswordController.swift in Sources */,
+				FA08A01F2BE3F07F00CC1EEF /* DownloadsController.swift in Sources */,
 				FAFEFB492BE34F1A00E12991 /* AuthManager.swift in Sources */,
 				FA11ED852BE39E6C00E7FF03 /* LoginUserRequest.swift in Sources */,
+				FA08A01B2BE3F00000CC1EEF /* ChatController.swift in Sources */,
 				FAE6C8E92BE0983C009A8D13 /* WebViewController.swift in Sources */,
 				FAFEFB4C2BE351A000E12991 /* RegisterUserRequest.swift in Sources */,
+				FA08A0172BE3EF2800CC1EEF /* MainTabBarControllerViewController.swift in Sources */,
 				FA2106E72BDFE56A00A7F070 /* HomeController.swift in Sources */,
 				FA2107072BDFF1AD00A7F070 /* String + Extension.swift in Sources */,
 				FAE6C8EB2BE09C46009A8D13 /* NetworkError.swift in Sources */,
+				FA08A01D2BE3F02F00CC1EEF /* SearchController.swift in Sources */,
 				FAE6C8EE2BE0CDC3009A8D13 /* AlertManager.swift in Sources */,
 				FA2106FB2BDFE73300A7F070 /* RegisterController.swift in Sources */,
 				FA21070B2BDFFE3500A7F070 /* CustomButton.swift in Sources */,
 				FA2106E32BDFE56A00A7F070 /* AppDelegate.swift in Sources */,
+				FA11ED882BE3B01300E7FF03 /* Validator.swift in Sources */,
 				FA2106FD2BDFE74600A7F070 /* LoginController.swift in Sources */,
+				FA08A0192BE3EFC400CC1EEF /* UpcomingController.swift in Sources */,
 				FA2106E52BDFE56A00A7F070 /* SceneDelegate.swift in Sources */,
 				FA2107042BDFEBC100A7F070 /* AuthHeaderView.swift in Sources */,
 				FA2107092BDFF60600A7F070 /* CustomTextField.swift in Sources */,
+				FAD2ADA12BE48D35002383DE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

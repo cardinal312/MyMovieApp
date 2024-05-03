@@ -27,6 +27,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if Auth.auth().currentUser == nil {
             // Go to sign screen
             self.goToController(with: LoginController())
+            //self.goToController(with: MainTabBarControllerViewController())
         } else {
             // Go to tabBar controller
             self.goToController(with: HomeController())

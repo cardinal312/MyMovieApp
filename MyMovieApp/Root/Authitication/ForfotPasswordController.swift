@@ -19,7 +19,7 @@ final class ForfotPasswordController: UIViewController {
         super.viewDidLoad()
         self.setupUI()
         
-        self.resetPasswordButton.addTarget(self, action: #selector(didTapresetPasswordButton), for: .touchUpInside)
+        self.resetPasswordButton.addTarget(self, action: #selector(didTapForgotPasswordButton), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,11 +57,23 @@ final class ForfotPasswordController: UIViewController {
     }
     
     // MARK: - Selectors
-    @objc private func didTapresetPasswordButton() {
-        guard let email = emailField.text, !email.isEmpty else { return }
-        // TODO: - Email validation
+    @objc private func didTapForgotPasswordButton() {
+        let email = emailField.text ?? ""
         
+        if !Validator.isValidEmail(for: email) {
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
         
+        AuthManager.shared.forgotPassword(with: email) { [weak self] error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                AlertManager.showSendingPasswordReset(on: self, with: error)
+                return
+            }
+            	
+            AlertManager.showPasswordResetSent(on: self)
+        }
     }
-    
 }

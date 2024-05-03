@@ -26,9 +26,19 @@ final class HomeController: UIViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .systemBackground
         self.setupUI()
         
-        self.someLabel.text = "CARDINAL 312"
+        AuthManager.shared.fetchUser(compleation: { [weak self] user, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            
+            self.someLabel.text = "\(user?.username ?? "")\n\(user?.email ?? "")"
+        })
+        
     }
     
     // MARK: - Setup UI

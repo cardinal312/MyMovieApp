@@ -27,6 +27,7 @@ final class AuthManager {
         
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
+                print(error)
                 compleation(false, .registerUser)
                 return
             }
@@ -44,6 +45,7 @@ final class AuthManager {
                     "email" : email
                 ]) { error in
                     if let error = error {
+                        print(error)
                         compleation(false, .passUserDataToCollectionUser)
                         return
                     }
@@ -55,6 +57,7 @@ final class AuthManager {
     func signIn(with userRequest: LoginUserRequest, compleation: @escaping (NetworkError?) -> Void) {
         Auth.auth().signIn(withEmail: userRequest.email, password: userRequest.password) { result, error in
             if let error = error {
+                print(error)
                 compleation(.signInAuth)
                 return
             } else {
@@ -65,11 +68,44 @@ final class AuthManager {
     
     func signOut(completion: @escaping (NetworkError?) -> Void) {
         do {
-           try Auth.auth().signOut()
+            try Auth.auth().signOut()
             completion(nil)
         } catch let error {
             print(error.localizedDescription)
             completion(.errorWithSignOut)
+        }
+    }
+    
+    func forgotPassword(with email: String, compleation: @escaping (Error?) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            compleation(error)
+        }
+    }
+    
+    func fetchUser(compleation: @escaping (User?, NetworkError?) -> Void) {
+        guard let userUID = Auth.auth().currentUser?.uid else { return }
+        
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(userUID)
+            .getDocument { snapshot, error in
+                
+                if let error = error {
+                    print(error)
+                    compleation(nil, .fetchUser)
+                    return
+                }
+                
+                if let snapshot = snapshot, let snapshotData = snapshot.data() {
+                    let username = snapshotData["username"] as? String
+                    let email = snapshotData["email"] as? String
+                    let user = User(username: username ?? "", email: email ?? "", userUID: userUID)
+                    
+                    DispatchQueue.main.async {
+                        compleation(user, nil)
+                }
+            }
         }
     }
 }

@@ -28,13 +28,11 @@ final class LoginController: UIViewController {
         self.signInButton.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
         self.newUserButton.addTarget(self, action: #selector(didTapNewUserButton), for: .touchUpInside)
         self.forgotPasswordButton.addTarget(self, action: #selector(didTapForgotPasswordButton), for: .touchUpInside)
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        
-        //self.didTapNewUserButton()
     }
     
     // MARK: - Setup UI
@@ -92,10 +90,30 @@ final class LoginController: UIViewController {
     
     // MARK: - Selectors
     @objc private func didTapSignInButton() {
-        let vc = HomeController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        self.present(nav, animated: false, completion: nil)
+        let loginRequest = LoginUserRequest(email: emailField.text ?? "", password: passwordField.text ?? "")
+        
+        // Email check
+        if !Validator.isValidEmail(for: loginRequest.email) {
+            AlertManager.showInvalidEmailAlert(on: self)
+        }
+        
+        // Password check !Validator.isPasswordValid ????
+        if Validator.isPasswordValid(for: loginRequest.password) {
+            AlertManager.showInvalidPasswordAlert(on: self)
+        }
+        
+        AuthManager.shared.signIn(with: loginRequest) { [weak self] error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                AlertManager.showSignInErrorAlert(on: self)
+                return
+            }
+            
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                sceneDelegate.checkAuthentication()
+            }
+        }
     }
     
     @objc private func didTapNewUserButton() {
